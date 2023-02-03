@@ -1,4 +1,0 @@
----
-# tasks file for ping_hosts
-  - name: 'ping task'
-    ping:

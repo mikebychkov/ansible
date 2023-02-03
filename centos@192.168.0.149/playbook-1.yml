@@ -1,8 +1,0 @@
-- name: 'Ping hosts'
-  hosts: all
-  roles:
-  - ping_hosts
-  - print_hostnames
-  tasks:
-  - debug:
-      msg: 'This some_variable value: {{ some_variable }}'

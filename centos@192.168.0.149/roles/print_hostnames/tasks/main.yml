@@ -1,8 +1,0 @@
----
-# tasks file for print_hostnames
-  - name: 'hostname check'
-    command: 'hostname'
-    register: cat_result
-  - name: 'print hostname'
-    debug:
-      var: cat_result.stdout

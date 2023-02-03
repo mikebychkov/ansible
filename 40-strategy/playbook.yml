@@ -1,0 +1,6 @@
+- name: 'Playbook'
+  hosts: server1, server2, server3,... , server100
+  strategy: [linear | free ] # linear - each tasks launches simultaneously on each host; free - task dont wait for each other to start;
+  serial: 3 # 3 at a time
+  tasks:
+    - ...

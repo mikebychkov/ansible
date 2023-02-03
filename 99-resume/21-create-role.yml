@@ -1,0 +1,23 @@
+cd /home/centos/playbooks/roles/
+
+ansible-galaxy init package
+
+vi /home/centos/playbooks/roles/package/tasks/main.yml
+"""
+- name: Install Nginx
+  ansible.builtin.package:
+    name: nginx 
+    state: latest
+- name: Start Nginx Service
+  ansible.builtin.service:
+    name: nginx 
+    state: started
+"""
+
+vi /home/centos/playbooks/role.yml
+"""
+- hosts: node01
+  become: true
+  roles:
+    - roles/package
+"""

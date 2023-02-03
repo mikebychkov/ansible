@@ -1,0 +1,17 @@
+- name: 'Update Test Host name'
+  hosts: test_host
+  become: true
+  tasks:
+    - name: 'update hostname'
+      hostname:
+        name: 'TestingServer'
+        use: systemd
+- name: 'Update Prod Host name'
+  hosts: prod_host
+  become: true
+  tasks:
+    - name: 'update hostname'
+      hostname:
+        name: 'ProductionServer'
+        use: systemd
+          

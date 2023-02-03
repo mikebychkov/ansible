@@ -1,0 +1,8 @@
+- name: File copy playbook
+  hosts: all
+  tasks:
+    - name: File copy task
+      copy:
+        src: ./file
+        dest: /tmp/copied-file
+

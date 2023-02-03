@@ -1,0 +1,2 @@
+prod_host ansible_host=192.168.0.131 ansible_connection=ssh ansible_user=centos
+test_host ansible_host=192.168.0.193 ansible_connection=ssh ansible_user=centos

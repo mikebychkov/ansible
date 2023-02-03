@@ -1,0 +1,2 @@
+ansible_host: 192.168.0.193
+some_variable: 'Led Zeppelin'

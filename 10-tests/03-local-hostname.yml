@@ -1,0 +1,10 @@
+- name: 'Change Local Host Name'
+  hosts: localhost
+  connection: local
+  become: true
+  tasks:
+  - name: 'update hostname'
+    hostname:
+      name: 'AnsibleServer'
+      use: systemd
+

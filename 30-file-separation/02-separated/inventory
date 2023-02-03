@@ -1,0 +1,7 @@
+prod_host 
+test_host 
+
+[my_hosts]
+prod_host
+test_host
+

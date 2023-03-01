@@ -1,0 +1,29 @@
+- name: DATETIME TEST
+  hosts: localhost
+  connection: local
+  vars:
+    build_datetime: '{{ ansible_date_time.iso8601_basic_short }}'
+
+  tasks:
+  - name: TEST DATETIME
+    debug:
+      msg: 'THIS IS HOW IT LOOKS LIKE IN ANSIBLE: {{ build_datetime }}'
+
+  - name: SLEEP FOR 5 SECONDS
+    pause:
+      seconds: 5
+
+  - name: TEST IT DOESNT CHANGED
+    debug:
+      msg: 'THIS IS HOW IT LOOKS LIKE IN ANSIBLE: {{ build_datetime }}'
+
+  - name: SAVE THAT VALUE
+    set_fact:
+      my_build_date: '{{ build_datetime }}'
+
+- name: TEST SET-FACT
+  hosts: localhost
+  connection: local
+  tasks:
+    - debug:
+        msg: 'THAT WHAT GOT: {{ hostvars["localhost"]["my_build_date"] }}'
